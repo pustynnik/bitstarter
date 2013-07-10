@@ -1,7 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var app = express.createServer(express.logger());
-
+var buffer = new Buffer(256);
 app.get('/', function(request, response) {
   response.send(buffer.toString(fs.readFileSync(index.html)));
 });
